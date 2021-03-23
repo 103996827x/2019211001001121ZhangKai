@@ -46,13 +46,13 @@
 <body>
 
    <div class="register">
-   <form>
+   <form method="post" action="${pageContext.request.contextPath}/RegisterServlet">
         <h1> New User registration</h1>
        <input name="username" type="text" placeholder="username" id="username" >
        <div><input name="password" type="text" placeholder="password" id="password"> <span id="tip">length must be at least 8 characters</span></div>
        <input name="email" type="text" placeholder="email" id="email" >
-       <div> Gender:<input type="radio" style="height: 10px" class="gender" value="0" name="selfValidateType" checked="true"> Male
-          <input type="radio" style="height: 10px" class="gender" value="1" name="selfValidateType" checked="false">Female </div>
+       <div> Gender:<input type="radio" style="height: 10px" class="gender" value="male" name="selfValidateType" checked="true"> Male
+          <input type="radio" style="height: 10px" class="gender" value="famale" name="selfValidateType" checked="false">Female </div>
        <input name="date" type="text" placeholder="Date of Birth(yyyy-mm-dd)" id="date" >
        <input type="submit" value="Register" id="submit">
    </form>

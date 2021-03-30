@@ -19,4 +19,33 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>JDBCDemoServlet</servlet-name>
+        <servlet-class>com.zhangkai.week4.demo.JDBCDemoServlet</servlet-class>
+<!--        String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";-->
+<!--        String url="jdbc:sqlserver://localhost:1433;DatabaseName=userdb";-->
+<!--        String userName="ZK";-->
+<!--        String password="103996827zk";-->
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:sqlserver://localhost:1433;DatabaseName=userdb</param-value>
+        </init-param>
+        <init-param>
+            <param-name>userName</param-name>
+            <param-value>ZK</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>103996827zk</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JDBCDemoServlet</servlet-name>
+        <url-pattern>/JDBCDemoServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

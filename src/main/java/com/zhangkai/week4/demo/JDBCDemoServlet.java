@@ -89,7 +89,7 @@ public class JDBCDemoServlet extends HttpServlet {
             Statement statement;
             statement=con.createStatement();
             rs=statement.executeQuery(sql2);
-            writer.print("<table table border=\"1\" >");
+            writer.print("<table  border=\"1\" align=\"center\">");
             writer.print("<tr>");
             writer.print("<td>"+"id"+"</td>");
             writer.print("<td>"+"username"+"</td>");

@@ -12,7 +12,7 @@
       body{
          background-color: #ffffff;
          display: flex;
-         flex-direction: row;
+         flex-direction: column;
          justify-content: center;
       }
       .register{
@@ -25,6 +25,7 @@
       }
       input{
          outline: none;
+          width: 200px;
          height: 30px;
          border-radius: 5px;
          border: 1px solid rgb(209,209,209);
@@ -36,6 +37,9 @@
          position: relative;
          left: 10px;
       }
+      .gender{
+          width: 50px;
+      }
       #submit{
          background-color: #e3901d;
          width: 100px;
@@ -44,6 +48,7 @@
 
 </head>
 <body>
+<%@include file="header.jsp"%>
 
    <div class="register">
 <%--   <form method="post" action="${pageContext.request.contextPath}/RegisterServlet">--%>
@@ -58,6 +63,8 @@
        <input type="submit" value="Register" id="submit">
    </form>
    </div>
+
+<%@include file="footer.jsp"%>
 </body>
 <script src="register.js"></script>
 </html>

@@ -13,11 +13,7 @@
     <title>Myjsp</title>
 </head>
 <body>
-<a href="http://www.ecjtu.jx.cn/">go to ecjtu</a>
-<form method="post" action="${pageContext.request.contextPath}/HelloWorldServlet">
-    Name:<input type="text" name="name"><br/>
-    ID:<input type="text" name="id"><br/>
-    <input type="submit" value="Send data to server">
-</form>
+<%@include file="header.jsp"%>
+<%@include file="footer.jsp"%>
 </body>
 </html>

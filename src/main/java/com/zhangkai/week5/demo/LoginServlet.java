@@ -14,17 +14,16 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-
-
     @Override
     public void init() throws ServletException {
-        String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://localhost:1433;DatabaseName=userdb";
-        String userName="ZK";
-        String password="103996827zk";
+        ServletContext config= getServletConfig().getServletContext();
+        String driver = config.getInitParameter("driver");
+        String url = config.getInitParameter("url");
+        String username = config.getInitParameter("username");
+        String password = config.getInitParameter("password");
         try {
             Class.forName(driver);
-            con= DriverManager.getConnection(url, userName, password);
+            con= DriverManager.getConnection(url, username, password);
             System.out.println("INIT()-->"+con);
         }catch (ClassNotFoundException | SQLException e){
             e.printStackTrace();

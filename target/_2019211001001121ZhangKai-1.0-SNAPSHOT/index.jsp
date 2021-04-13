@@ -14,6 +14,8 @@
 <a href="register.jsp">This is register</a>
 </br>
 <a href="login.jsp">This is login</a>
+</br>
+<a href="Search.jsp">This is search-week6</a>
 <%@include file="footer.jsp"%>
 </body>
 </html>

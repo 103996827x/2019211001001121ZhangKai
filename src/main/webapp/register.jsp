@@ -52,7 +52,7 @@
 
    <div class="register">
 <%--   <form method="post" action="${pageContext.request.contextPath}/RegisterServlet">--%>
-       <form method="post" action="${pageContext.request.contextPath}/JDBCCDemoServlet">
+       <form method="post" action="${pageContext.request.contextPath}/JDBCServlet">
         <h1> New User registration</h1>
        <input name="username" type="text" placeholder="username" id="username" >
        <div><input name="password" type="text" placeholder="password" id="password"> <span id="tip">length must be at least 8 characters</span></div>

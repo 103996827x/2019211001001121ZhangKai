@@ -20,8 +20,8 @@
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>JDBCDemoServlet</servlet-name>
-        <servlet-class>com.zhangkai.week4.demo.JDBCDemoServlet</servlet-class>
+        <servlet-name>JDBCServlet</servlet-name>
+        <servlet-class>com.zhangkai.week6.demo.JDBCServlet</servlet-class>
         <init-param>
             <param-name>driver</param-name>
             <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
@@ -41,8 +41,8 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>JDBCDemoServlet</servlet-name>
-        <url-pattern>/JDBCDemoServlet</url-pattern>
+        <servlet-name>JDBCServlet</servlet-name>
+        <url-pattern>/JDBCServlet</url-pattern>
     </servlet-mapping>
     <context-param>
         <param-name>driver</param-name>

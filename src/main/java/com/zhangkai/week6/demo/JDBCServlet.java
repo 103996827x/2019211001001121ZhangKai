@@ -70,13 +70,8 @@ public class JDBCServlet extends HttpServlet {
             statement.setString(3,email);
             statement.setString(4,gender);
             statement.setDate(5, Date.valueOf(birthdate));
+            statement.executeUpdate();
             response.sendRedirect("login.jsp");
-            int num=statement.executeUpdate();
-            if(num>0){
-                System.out.println("add success");
-            }else{
-                System.out.println("false");
-            }
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

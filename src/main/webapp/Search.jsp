@@ -25,7 +25,6 @@
     </select>
     <input type="submit" value="search">
 </form>
-
 <%@include file="footer.jsp"%>
 </body>
 </html>

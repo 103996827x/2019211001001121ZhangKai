@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%@include file="header.jsp"%>
 <head>
     <title>userinfo</title>
 </head>
@@ -18,5 +19,6 @@
     <tr><td>Gender:</td><td><%=request.getAttribute("gender")%></td></tr>
     <tr><td>Birth Date:</td><td><%=request.getAttribute("birthdate")%></td></tr>
 </table>
+<%@include file="footer.jsp"%>
 </body>
 </html>

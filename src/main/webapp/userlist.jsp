@@ -12,11 +12,12 @@
 <%@ page import="java.sql.SQLException" %>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>JSP - Hello World</title>
 </head>
 <body>
-
+<%@include file="header.jsp"%>
 <table  border="1" >
     <tr>
         <td>id</td>
@@ -49,6 +50,6 @@
     }
         %>
 </table>
-
+<%@include file="footer.jsp"%>
 </body>
 </html>

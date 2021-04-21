@@ -45,6 +45,12 @@
     </style>
 </head>
 <body>
+<h1>Login</h1>
+<%
+    if (!(request.getAttribute("message")==null)){
+        out.print("<h3>"+request.getAttribute("message")+"</h3>");
+    }
+%>
 <%@include file="header.jsp"%>
 <div class="login">
     <form method="post" action="${pageContext.request.contextPath}/LoginServlet">
@@ -54,7 +60,6 @@
         <input type="submit" value="Register" id="submit">
     </form>
 </div>
-
 <%@include file="footer.jsp"%>
 </body>
 </html>

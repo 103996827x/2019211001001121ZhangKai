@@ -1,7 +1,6 @@
 package com.zhangkai.dao;
 
 import com.zhangkai.model.User;
-import sun.security.util.Password;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,20 +22,23 @@ public class UserDao implements IUserDao {
         statement.setString(3,user.getEmail());
         statement.setString(4, user.getGender());
         statement.setDate(5, (java.sql.Date) user.getBirthdate());
-        statement.executeUpdate();
-        System.out.println("insert success");
-        return false;
+        int n=statement.executeUpdate();
+        if(n>0) {
+            return true;
+        }else {return  false;}
     }
 
     @Override
-    public int deleteUser(Connection con, User user) throws SQLException {
+    public boolean deleteUser(Connection con, User user) throws SQLException {
         PreparedStatement statement=null;
         String sql = "delete from usertable where username=?";
         statement=con.prepareStatement(sql);
         statement.setString(1,user.getUsername());
-        statement.executeUpdate();
+        int n=statement.executeUpdate();
         System.out.println("delete success");
-        return 0;
+        if(n>0) {
+            return true;
+        }else {return  false;}
     }
 
     @Override

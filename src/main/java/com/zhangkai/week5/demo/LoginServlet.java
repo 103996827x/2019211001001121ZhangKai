@@ -44,11 +44,25 @@ public class LoginServlet extends HttpServlet {
         try {
             User user=userDao.findByUsernamePassword(con,username,password);
             if(user!=null){
+                String rememberme=request.getParameter("rememberme");
+                if (rememberme!=null&&rememberme.equals("1")){
+                    Cookie usernameCookie= new Cookie("cUsername",user.getUsername());
+                    Cookie passwordCookie=new Cookie("cPassword",user.getPassword());
+                    Cookie rememberMeCookie=new Cookie("cRememberMe",rememberme);
+                    usernameCookie.setMaxAge(5);
+                    passwordCookie.setMaxAge(5);
+                    rememberMeCookie.setMaxAge(5);
+                    response.addCookie(usernameCookie);
+                    response.addCookie(passwordCookie);
+                    response.addCookie(rememberMeCookie);
+                }
+                Cookie c=new Cookie("seessionid", ""+user.getId());
+                c.setMaxAge(10*60);
                 request.setAttribute("user",user);
                 request.getRequestDispatcher("WEB-INF/views/userinfo.jsp").forward(request,response);
             }else {
                 request.setAttribute("message","Username or password Error!!!");
-                request.getRequestDispatcher("WEB-INF/views/login.jsp\"").forward(request,response);
+                request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

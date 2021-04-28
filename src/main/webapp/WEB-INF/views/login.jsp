@@ -38,6 +38,11 @@
             position: relative;
             left: 10px;
         }
+        .remember{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
         #submit{
             background-color: #e3901d;
             width: 100px;
@@ -46,17 +51,38 @@
 </head>
 <body>
 <h1>Login</h1>
+
+<%
+Cookie[] allcookies=request.getCookies();
+String username="";
+String password="";
+String rememberMeVale="";
+if(allcookies!=null) {
+    for (Cookie c : allcookies) {
+        if (c.getName().equals("cUsername")) {
+            username = c.getValue();
+        }
+        if (c.getName().equals("cPassword")) {
+            password = c.getValue();
+        }
+        if (c.getName().equals("cRememberMe")) {
+            rememberMeVale = c.getValue();
+        }
+    }
+}
+%>
+<%@include file="header.jsp"%>
 <%
     if (!(request.getAttribute("message")==null)){
         out.print("<h3>"+request.getAttribute("message")+"</h3>");
     }
 %>
-<%@include file="header.jsp"%>
 <div class="login">
     <form method="post" action="${pageContext.request.contextPath}/LoginServlet">
         <h1> New User registration</h1>
         <input name="username" type="text" placeholder="username" id="username" >
         <div><input name="password" type="text" placeholder="password" id="password"> </div>
+        <div class="remember"><input type="checkbox" style="width: 20px ;height: 20px;margin-right: 15px" value="1" name="rememberme" <%=rememberMeVale.equals("1")?"checked":""%>>Remember me</div>
         <input type="submit" value="Register" id="submit">
     </form>
 </div>

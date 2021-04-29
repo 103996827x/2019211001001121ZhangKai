@@ -58,7 +58,11 @@ public class LoginServlet extends HttpServlet {
                 }
                 Cookie c=new Cookie("seessionid", ""+user.getId());
                 c.setMaxAge(10*60);
-                request.setAttribute("user",user);
+                HttpSession session = request.getSession();
+                System.out.println("session id  ---"+session.getId());
+                session.setMaxInactiveInterval(10);
+                session.setAttribute("user",user);
+//                request.setAttribute("user",user);
                 request.getRequestDispatcher("WEB-INF/views/userinfo.jsp").forward(request,response);
             }else {
                 request.setAttribute("message","Username or password Error!!!");

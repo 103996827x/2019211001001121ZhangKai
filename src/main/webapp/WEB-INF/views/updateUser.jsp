@@ -49,7 +49,7 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
-<% User u= (User) request.getAttribute("user");%>
+<% User u= (User) session.getAttribute("user");%>
 <div class="register">
     <form method="post" action="${pageContext.request.contextPath}/update">
         <input type="hidden" name="id" value="<%=u.getId()%>">
@@ -58,9 +58,10 @@
             <input name="password" type="text" placeholder="password" id="password" value="<%=u.getPassword()%>">
         </div>
         <input name="email" type="text" placeholder="email" id="email" value="<%=u.getEmail()%>">
-        <div>Gender:<input type="radio" style="height: 10px" class="gender" value="male" name="selfValidateType" checked="true" <%="male".equals(u.getGender())?"checked":""%>> Male
-            <input type="radio" style="height: 10px" class="gender" value="famale" name="selfValidateType" checked="false" <%="female".equals(u.getGender())?"checked":""%>>Female </div>
+        <div>Gender:<input type="radio" style="height: 10px" class="gender" value="male" name="selfValidateType" checked="true" <%="male".equals(u.getGender())?"checked":""%>> male
+            <input type="radio" style="height: 10px" class="gender" value="famale" name="selfValidateType" checked="false" <%="female".equals(u.getGender())?"checked":""%>>female </div>
         <input name="date" type="text" placeholder="Date of Birth(yyyy-mm-dd)" id="date" value="<%=u.getBirthdate()%>" >
+        <input type="submit" value="update">
     </form>
 
 </div>

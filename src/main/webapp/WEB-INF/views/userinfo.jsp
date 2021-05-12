@@ -18,7 +18,7 @@
 <%--        out.println("<br>"+c.getName()+"---"+c.getValue());--%>
 <%--    }--%>
 <%--%>--%>
-<%  user= (User) session.getAttribute("user");
+<% User user = (User) session.getAttribute("user");
 %>
 <table>
     <tr><td>Username:</td><td><%=user.getUsername()%></td></tr>

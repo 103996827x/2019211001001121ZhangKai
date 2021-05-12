@@ -10,12 +10,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-@WebServlet(name = "LoginServlet", value = "/LoginServlet")
+@WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
     Connection con=null;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
     }
     @Override
@@ -62,7 +61,6 @@ public class LoginServlet extends HttpServlet {
                 System.out.println("session id  ---"+session.getId());
                 session.setMaxInactiveInterval(10);
                 session.setAttribute("user",user);
-//                request.setAttribute("user",user);
                 request.getRequestDispatcher("WEB-INF/views/userinfo.jsp").forward(request,response);
             }else {
                 request.setAttribute("message","Username or password Error!!!");

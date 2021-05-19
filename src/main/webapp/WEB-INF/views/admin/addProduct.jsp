@@ -27,15 +27,22 @@
 				                <input type="text" name="price" class="form-control" required="required" placeholder="Price">
 				            </div>
 				            <div class="form-group col-md-6">
-				               	<select name="categoryId">
-										<option >-- Category --</option>
-											<!-- loop_start -->
-											
-										<option value=""></option>
-										
-										<!-- loop_end -->
-										
-										</select>
+								<select name="categoryId">
+									<option >-- Category --</option>
+									<!-- loop_start -->
+
+									<option value="1">FASHION</option>
+									<option value="2">HOUSEHOLD</option>
+									<option value="3">INTERIORS</option>
+									<option value="4">CLOTHING</option>
+									<option value="5">BAGS</option>
+									<option value="6">SHOES</option>
+									<option value="7">BOOKS</option>
+									<option value="8">OTHER</option>
+
+									<!-- loop_end -->
+
+								</select>
 				            </div>
 				            <div class="form-group col-md-6">
 				                <input type="file" name="picture" class="form-control" required="required" placeholder="picture">

@@ -14,12 +14,12 @@ import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.List;
 
-@WebServlet(name = "AddProductServlet", value = "/admin/addProductServlet")
+@WebServlet(name = "AddProductServlet", value = "/admin/addProduct")
+@MultipartConfig(maxFileSize = 16177215)
 public class AddProductServlet extends HttpServlet {
     Connection con=null;
-    @Override
     public void init() throws ServletException {
-        con= (Connection) getServletContext().getAttribute("con");
+        con=(Connection) getServletContext().getAttribute("con");
     }
 
     @Override
@@ -29,8 +29,8 @@ public class AddProductServlet extends HttpServlet {
             request.setAttribute("categoryList",categoryList);
             String path="/WEB-INF/views/admin/addProduct.jsp";
             request.getRequestDispatcher(path).forward(request,response);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
 
@@ -61,5 +61,4 @@ public class AddProductServlet extends HttpServlet {
             throwables.printStackTrace();
         }
     }
-
-    }
+}

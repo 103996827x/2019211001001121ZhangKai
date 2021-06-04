@@ -5,32 +5,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
-import java.util.Collection;
 
 public class RegisterServlet extends HttpServlet {
-    Connection con=null;
+    Connection con = null;
+
     @Override
     public void init() throws ServletException {
-        con=(Connection) getServletContext().getAttribute("con");
+        con = (Connection) getServletContext().getAttribute("con");
     }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ResultSet rs;
-        String username=request.getParameter("username");
-        String password=request.getParameter("password");
-        String email=request.getParameter("email");
-        String gender=request.getParameter("selfValidateType");
-        String birthdate=request.getParameter("date");
-        String sql1="INSERT INTO dbo.usertable" +
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String gender = request.getParameter("selfValidateType");
+        String birthdate = request.getParameter("date");
+        String sql1 = "INSERT INTO dbo.usertable" +
                 "(username, password,email,gender,birthdate)VALUES( ?,?,?,?,?)";
-        String sql2="select * from usertable";
+        String sql2 = "select * from usertable";
         try {
-            PreparedStatement statement=con.prepareStatement(sql1);
-            statement.setString(1,username);
-            statement.setString(2,password);
-            statement.setString(3,email);
-            statement.setString(4,gender);
+            PreparedStatement statement = con.prepareStatement(sql1);
+            statement.setString(1, username);
+            statement.setString(2, password);
+            statement.setString(3, email);
+            statement.setString(4, gender);
             statement.setDate(5, Date.valueOf(birthdate));
             statement.executeUpdate();
             response.sendRedirect("login");
@@ -40,8 +40,8 @@ public class RegisterServlet extends HttpServlet {
 
         try {
             Statement statement;
-            statement=con.createStatement();
-            rs=statement.executeQuery(sql2);
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql2);
 //            writer.print("<table  b"order=\"1\" align=\"center\">");
 //            writer.print("<tr>");
 //            writer.print("<td>"+"id"+"</td>");
@@ -73,6 +73,6 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       req.getRequestDispatcher("/WEB-INF/views/register.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/views/register.jsp").forward(req, resp);
     }
 }

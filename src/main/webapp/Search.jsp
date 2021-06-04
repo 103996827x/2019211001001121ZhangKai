@@ -12,7 +12,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
 <h1><%= "Welcome to My online shop Home Page" %>
 </h1>
 <br>
@@ -25,6 +25,6 @@
     </select>
     <input type="submit" value="search">
 </form>
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 </html>

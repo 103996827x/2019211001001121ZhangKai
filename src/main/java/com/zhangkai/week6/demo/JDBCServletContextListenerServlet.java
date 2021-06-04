@@ -1,9 +1,9 @@
 package com.zhangkai.week6.demo;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
-import java.io.IOException;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,17 +12,17 @@ import java.sql.SQLException;
 public class JDBCServletContextListenerServlet implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        ServletContext context= sce.getServletContext();
-        String driver=context.getInitParameter("driver");
-        String url=context.getInitParameter("url");
-        String username=context.getInitParameter("username");
-        String password=context.getInitParameter("password");
+        ServletContext context = sce.getServletContext();
+        String driver = context.getInitParameter("driver");
+        String url = context.getInitParameter("url");
+        String username = context.getInitParameter("username");
+        String password = context.getInitParameter("password");
         try {
             Class.forName(driver);
-            Connection con= DriverManager.getConnection(url,username,password);
-            System.out.println("i am in contextInitialized()-->"+con);
+            Connection con = DriverManager.getConnection(url, username, password);
+            System.out.println("i am in contextInitialized()-->" + con);
             //System.out.println("init()-->"+con);
-            context.setAttribute("con",con);
+            context.setAttribute("con", con);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }

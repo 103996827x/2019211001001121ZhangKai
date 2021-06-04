@@ -10,51 +10,56 @@
 <head>
     <title>Login</title>
     <style type="text/css">
-        body{
+        body {
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .login{
+
+        .login {
             margin-top: 50px;
         }
-        .login form{
+
+        .login form {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
-        input{
+
+        input {
             outline: none;
             width: 200px;
             height: 30px;
             border-radius: 5px;
-            border: 1px solid rgb(209,209,209);
+            border: 1px solid rgb(209, 209, 209);
             background-color: #eeeee7;
             margin-bottom: 25px;
         }
-        input::-webkit-input-placeholder{
+
+        input::-webkit-input-placeholder {
             font-size: 15px;
             position: relative;
             left: 10px;
         }
-        #submit{
+
+        #submit {
             background-color: #e3901d;
             width: 100px;
         }
     </style>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
 <div class="login">
     <form method="post" action="${pageContext.request.contextPath}/LoginServlet">
         <h1> New User registration</h1>
-        <input name="username" type="text" placeholder="username" id="username" >
-        <div><input name="password" type="text" placeholder="password" id="password"> </div>
+        <input name="username" type="text" placeholder="username" id="username">
+        <div><input name="password" type="text" placeholder="password" id="password"></div>
         <input type="submit" value="Register" id="submit">
     </form>
 </div>
 
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 </html>

@@ -17,8 +17,8 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<%@include file="header.jsp"%>
-<table  border="1" >
+<%@include file="header.jsp" %>
+<table border="1">
     <tr>
         <td>id</td>
         <td>username</td>
@@ -28,28 +28,29 @@
         <td>birthdate</td>
     </tr>
     <%
-        ResultSet rs=(ResultSet) request.getAttribute("rsname");
+        ResultSet rs = (ResultSet) request.getAttribute("rsname");
         System.out.println(rs);
-        if(rs==null){
-        %>
+        if (rs == null) {
+    %>
     <tr>
         <td>no data</td>
     </tr>
-    <%}else {
-        while (rs.next()) {
-            out.print("<tr>");
-            out.println("<td>" + rs.getObject("id") + "</td>");
-            out.println("<td>" + rs.getObject("username") + "</td>");
-            out.println("<td>" + rs.getObject("password") + "</td>");
-            out.println("<td>" + rs.getObject("email") + "</td>");
-            out.println("<td>" + rs.getObject("gender") + "</td>");
-            out.println("<td>" + rs.getObject("birthdate") + "</td>");
-            out.print("</tr>");
-        }
+    <%
+        } else {
+            while (rs.next()) {
+                out.print("<tr>");
+                out.println("<td>" + rs.getObject("id") + "</td>");
+                out.println("<td>" + rs.getObject("username") + "</td>");
+                out.println("<td>" + rs.getObject("password") + "</td>");
+                out.println("<td>" + rs.getObject("email") + "</td>");
+                out.println("<td>" + rs.getObject("gender") + "</td>");
+                out.println("<td>" + rs.getObject("birthdate") + "</td>");
+                out.print("</tr>");
+            }
 
-    }
-        %>
+        }
+    %>
 </table>
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 </html>

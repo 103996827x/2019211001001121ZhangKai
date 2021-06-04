@@ -1,14 +1,16 @@
 package com.zhangkai.model;
+
 import java.io.InputStream;
+
 public class Product {
-    private int  productId;
+    private int productId;
     private int categoryId;
     private String productName;
     private String productDescription;
     private InputStream picture;
     private double price;
 
-    public Product(){
+    public Product() {
 
     }
 

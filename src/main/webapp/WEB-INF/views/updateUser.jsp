@@ -10,46 +10,52 @@
 <head>
     <title>Title</title>
     <style type="text/css">
-        body{
+        body {
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .register{
+
+        .register {
             margin-top: 50px;
         }
-        .register form{
+
+        .register form {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
-        input{
+
+        input {
             outline: none;
             width: 200px;
             height: 30px;
             border-radius: 5px;
-            border: 1px solid rgb(209,209,209);
+            border: 1px solid rgb(209, 209, 209);
             background-color: #eeeee7;
             margin-bottom: 25px;
         }
-        input::-webkit-input-placeholder{
+
+        input::-webkit-input-placeholder {
             font-size: 15px;
             position: relative;
             left: 10px;
         }
-        .gender{
+
+        .gender {
             width: 50px;
         }
-        #submit{
+
+        #submit {
             background-color: #e3901d;
             width: 100px;
         }
     </style>
 </head>
 <body>
-<%@include file="header.jsp"%>
-<% User u= (User) session.getAttribute("user");%>
+<%@include file="header.jsp" %>
+<% User u = (User) session.getAttribute("user");%>
 <div class="register">
     <form method="post" action="${pageContext.request.contextPath}/update">
         <input type="hidden" name="id" value="<%=u.getId()%>">
@@ -58,14 +64,17 @@
             <input name="password" type="text" placeholder="password" id="password" value="<%=u.getPassword()%>">
         </div>
         <input name="email" type="text" placeholder="email" id="email" value="<%=u.getEmail()%>">
-        <div>Gender:<input type="radio" style="height: 10px" class="gender" value="male" name="selfValidateType" checked="true" <%="male".equals(u.getGender())?"checked":""%>> male
-            <input type="radio" style="height: 10px" class="gender" value="famale" name="selfValidateType" checked="false" <%="female".equals(u.getGender())?"checked":""%>>female </div>
-        <input name="date" type="text" placeholder="Date of Birth(yyyy-mm-dd)" id="date" value="<%=u.getBirthdate()%>" >
+        <div>Gender:<input type="radio" style="height: 10px" class="gender" value="male" name="selfValidateType"
+                           checked="true" <%="male".equals(u.getGender())?"checked":""%>> male
+            <input type="radio" style="height: 10px" class="gender" value="famale" name="selfValidateType"
+                   checked="false" <%="female".equals(u.getGender())?"checked":""%>>female
+        </div>
+        <input name="date" type="text" placeholder="Date of Birth(yyyy-mm-dd)" id="date" value="<%=u.getBirthdate()%>">
         <input type="submit" value="update">
     </form>
 
 </div>
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 <script src="WEB-INF/register.js"></script>
 </html>

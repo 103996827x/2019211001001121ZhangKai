@@ -13,7 +13,7 @@
     <title>Myjsp</title>
 </head>
 <body>
-<%@include file="header.jsp"%>
-<%@include file="footer.jsp"%>
+<%@include file="header.jsp" %>
+<%@include file="footer.jsp" %>
 </body>
 </html>

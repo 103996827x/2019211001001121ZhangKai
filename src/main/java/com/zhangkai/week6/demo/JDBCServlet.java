@@ -1,13 +1,10 @@
 package com.zhangkai.week6.demo;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 
 //@WebServlet(urlPatterns = "/JDBCDemoServlet",
@@ -19,7 +16,8 @@ import java.sql.*;
 // },loadOnStartup = 1
 //)
 public class JDBCServlet extends HttpServlet {
-    Connection con=null;
+    Connection con = null;
+
     @Override
     public void init() throws ServletException {
 //        String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
@@ -33,20 +31,21 @@ public class JDBCServlet extends HttpServlet {
 //        }catch (ClassNotFoundException | SQLException e){
 //            e.printStackTrace();
 //        }
-        con=(Connection) getServletContext().getAttribute("con");
+        con = (Connection) getServletContext().getAttribute("con");
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("I am in doGet()");
-        String sql="select * from usertable";
+        String sql = "select * from usertable";
         ResultSet rs;
         Statement statement;
         try {
-            statement=con.createStatement();
-            rs=statement.executeQuery(sql);
-            while (rs.next()){
-            };
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+            }
+            ;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -55,20 +54,20 @@ public class JDBCServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ResultSet rs;
-        String username=request.getParameter("username");
-        String password=request.getParameter("password");
-        String email=request.getParameter("email");
-        String gender=request.getParameter("selfValidateType");
-        String birthdate=request.getParameter("date");
-        String sql1="INSERT INTO dbo.usertable" +
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String gender = request.getParameter("selfValidateType");
+        String birthdate = request.getParameter("date");
+        String sql1 = "INSERT INTO dbo.usertable" +
                 "(username, password,email,gender,birthdate)VALUES( ?,?,?,?,?)";
-        String sql2="select * from usertable";
+        String sql2 = "select * from usertable";
         try {
-            PreparedStatement statement=con.prepareStatement(sql1);
-            statement.setString(1,username);
-            statement.setString(2,password);
-            statement.setString(3,email);
-            statement.setString(4,gender);
+            PreparedStatement statement = con.prepareStatement(sql1);
+            statement.setString(1, username);
+            statement.setString(2, password);
+            statement.setString(3, email);
+            statement.setString(4, gender);
             statement.setDate(5, Date.valueOf(birthdate));
             statement.executeUpdate();
             response.sendRedirect("login.jsp");
@@ -79,8 +78,8 @@ public class JDBCServlet extends HttpServlet {
 
         try {
             Statement statement;
-            statement=con.createStatement();
-            rs=statement.executeQuery(sql2);
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql2);
 //            writer.print("<table  b"order=\"1\" align=\"center\">");
 //            writer.print("<tr>");
 //            writer.print("<td>"+"id"+"</td>");
@@ -111,7 +110,7 @@ public class JDBCServlet extends HttpServlet {
 
     }
 
-    public void destroy(){
+    public void destroy() {
         super.destroy();
         try {
             con.close();

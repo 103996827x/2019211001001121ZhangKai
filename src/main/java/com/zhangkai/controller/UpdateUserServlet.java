@@ -16,15 +16,16 @@ import java.sql.SQLException;
 
 @WebServlet(name = "UpdateServlet", value = "/update")
 public class UpdateUserServlet extends HttpServlet {
-    Connection con=null;
+    Connection con = null;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/views/updateUser.jsp").forward(request,response);
+        request.getRequestDispatcher("WEB-INF/views/updateUser.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        User user=new User();
+        User user = new User();
         user.setUsername(request.getParameter("username"));
         user.setPassword(request.getParameter("password"));
         user.setEmail(request.getParameter("email"));
@@ -32,12 +33,12 @@ public class UpdateUserServlet extends HttpServlet {
         user.setBirthdate(Date.valueOf(request.getParameter("date")));
         user.setId(Integer.parseInt(request.getParameter("id")));
         try {
-            HttpSession session=request.getSession();
-            session.setMaxInactiveInterval(60*60);
-            session.setAttribute("user",user);
+            HttpSession session = request.getSession();
+            session.setMaxInactiveInterval(60 * 60);
+            session.setAttribute("user", user);
             UserDao userDao = new UserDao();
-            if(userDao.updateUser(con,user)!=0){
-                request.getRequestDispatcher("WEB-INF/views/userinfo.jsp").forward(request,response);
+            if (userDao.updateUser(con, user) != 0) {
+                request.getRequestDispatcher("WEB-INF/views/userinfo.jsp").forward(request, response);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -47,6 +48,6 @@ public class UpdateUserServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        con=(Connection) getServletContext().getAttribute("con");
+        con = (Connection) getServletContext().getAttribute("con");
     }
 }

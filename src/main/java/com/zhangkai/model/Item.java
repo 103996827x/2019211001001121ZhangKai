@@ -6,7 +6,7 @@ public class Item implements Serializable {
     private Product product;
     private int quantity;
 
-    private Item() {
+    public Item() {
         super();
     }
 

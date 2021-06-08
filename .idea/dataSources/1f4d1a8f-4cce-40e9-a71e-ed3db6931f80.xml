@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="userdb@localhost">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.20">
+    <root id="1">
+      <ServerVersion>10.50.1617</ServerVersion>
+      <PermissionsCheckSum>14720739172</PermissionsCheckSum>
+      <Grants>0|root||1|connect sql|G
+0|root||2|view any database|G
+0|root||271|alter any database|W
+0|root||271|connect sql|G
+0|root||271|create any database|W
+0|root||271|view any database|W
+2|||2|connect|G
+3|||2|connect|G
+4|||2|connect|G
+5|||2|connect|G
+</Grants>
+    </root>
+    <database id="2" parent="1" name="Book_ReaderDB2019211001001121">
+      <ObjectId>7</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="3" parent="1" name="ReportServer$SQL">
+      <ObjectId>5</ObjectId>
+      <Collation>Latin1_General_CI_AS_KS_WS</Collation>
+    </database>
+    <database id="4" parent="1" name="ReportServer$SQLTempDB">
+      <ObjectId>6</ObjectId>
+      <Collation>Latin1_General_CI_AS_KS_WS</Collation>
+    </database>
+    <database id="5" parent="1" name="airport">
+      <ObjectId>9</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="6" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="7" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="8" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="9" parent="1" name="plane">
+      <ObjectId>8</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="10" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="11" parent="1" name="userdb">
+      <ObjectId>10</ObjectId>
+      <PermissionsCheckSum>1059020366</PermissionsCheckSum>
+      <Grants>10|database||1|connect|G
+</Grants>
+      <Current>1</Current>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+      <Fingerprint>10.44283/BA952179-AFAC-4A8A-9374-109E4B5A27F2@ZK\SQL</Fingerprint>
+    </database>
+    <login id="12" parent="1" name="sa">
+      <ObjectId>1</ObjectId>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="13" parent="1" name="public">
+      <ObjectId>2</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="14" parent="1" name="sysadmin">
+      <ObjectId>3</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="15" parent="1" name="securityadmin">
+      <ObjectId>4</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="16" parent="1" name="serveradmin">
+      <ObjectId>5</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="17" parent="1" name="setupadmin">
+      <ObjectId>6</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="18" parent="1" name="processadmin">
+      <ObjectId>7</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="19" parent="1" name="diskadmin">
+      <ObjectId>8</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="20" parent="1" name="dbcreator">
+      <ObjectId>9</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="21" parent="1" name="bulkadmin">
+      <ObjectId>10</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="22" parent="1" name="ZK">
+      <ObjectId>271</ObjectId>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <schema id="23" parent="11" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="24" parent="11" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="25" parent="11" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="26" parent="11" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="27" parent="11" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="28" parent="11" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="29" parent="11" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="30" parent="11" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="31" parent="11" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="32" parent="11" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="33" parent="11" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2021-05-26.00:46:45.993</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="34" parent="11" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="35" parent="11" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <role id="36" parent="11" name="public">
+      <ObjectId>0</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="37" parent="11" name="dbo">
+      <ObjectId>1</ObjectId>
+      <DefaultSchema>dbo</DefaultSchema>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="38" parent="11" name="guest">
+      <ObjectId>2</ObjectId>
+      <DefaultSchema>guest</DefaultSchema>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="39" parent="11" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="40" parent="11" name="sys">
+      <ObjectId>4</ObjectId>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="41" parent="11" name="db_owner">
+      <ObjectId>16384</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="42" parent="11" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="43" parent="11" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="44" parent="11" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="45" parent="11" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="46" parent="11" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="47" parent="11" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="48" parent="11" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="49" parent="11" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <table id="50" parent="33" name="Category">
+      <ObjectId>37575172</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:12:50.010</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-20.04:30:41.483</ModifiedTimestamp>
+    </table>
+    <table id="51" parent="33" name="Order">
+      <ObjectId>85575343</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:17:24.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:17:58.863</ModifiedTimestamp>
+    </table>
+    <table id="52" parent="33" name="OrderDetail">
+      <ObjectId>117575457</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:17:58.160</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:17:59.343</ModifiedTimestamp>
+    </table>
+    <table id="53" parent="33" name="Payment">
+      <ObjectId>197575742</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:18:50.097</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:18:50.363</ModifiedTimestamp>
+    </table>
+    <table id="54" parent="33" name="product">
+      <ObjectId>5575058</ObjectId>
+      <CreatedTimestamp>2021-05-19.01:55:36.657</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-26.00:46:44.853</ModifiedTimestamp>
+    </table>
+    <table id="55" parent="33" name="usertable">
+      <ObjectId>2137058649</ObjectId>
+      <CreatedTimestamp>2021-03-30.08:00:18.973</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-30.08:00:18.973</ModifiedTimestamp>
+    </table>
+    <column id="56" parent="50" name="CategoryId">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="50" name="CategoryName">
+      <Position>2</Position>
+      <DataType>nvarchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="50" name="Description">
+      <Position>3</Position>
+      <DataType>nvarchar(200 char)|0s</DataType>
+    </column>
+    <column id="59" parent="50" name="Active">
+      <Position>4</Position>
+      <DataType>bit|0s</DataType>
+    </column>
+    <column id="60" parent="51" name="OrderId">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="51" name="CustomerId">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="51" name="PaymentId">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="63" parent="51" name="OrderDate">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="51" name="FirstName">
+      <Position>5</Position>
+      <DataType>nvarchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="51" name="LastName">
+      <Position>6</Position>
+      <DataType>nvarchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="51" name="Address1">
+      <Position>7</Position>
+      <DataType>nvarchar(300 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="51" name="Address2">
+      <Position>8</Position>
+      <DataType>nvarchar(300 char)|0s</DataType>
+    </column>
+    <column id="68" parent="51" name="City">
+      <Position>9</Position>
+      <DataType>nvarchar(100 char)|0s</DataType>
+    </column>
+    <column id="69" parent="51" name="State">
+      <Position>10</Position>
+      <DataType>nvarchar(100 char)|0s</DataType>
+    </column>
+    <column id="70" parent="51" name="PostalCode">
+      <Position>11</Position>
+      <DataType>bit|0s</DataType>
+    </column>
+    <column id="71" parent="51" name="Country">
+      <Position>12</Position>
+      <DataType>nvarchar(100 char)|0s</DataType>
+    </column>
+    <column id="72" parent="51" name="Phone">
+      <Position>13</Position>
+      <DataType>nvarchar(20 char)|0s</DataType>
+    </column>
+    <column id="73" parent="51" name="Notes">
+      <Position>14</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+    </column>
+    <column id="74" parent="51" name="OrderTotal">
+      <Position>15</Position>
+      <DataType>numeric(18,2)|0s</DataType>
+    </column>
+    <index id="75" parent="51" name="PK_Order">
+      <Position>1</Position>
+      <ColNames>OrderId</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="51" name="PK_Order">
+      <ObjectId>101575400</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:17:24.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:17:24.737</ModifiedTimestamp>
+      <ColNames>OrderId</ColNames>
+      <UnderlyingIndexName>PK_Order</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="77" parent="52" name="OrderDeatilId">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="52" name="OrderId">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="52" name="ProductId">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="52" name="Price">
+      <Position>4</Position>
+      <DataType>numeric(18,2)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="52" name="Quantity">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="52" name="Total">
+      <Position>6</Position>
+      <DataType>numeric(18,2)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="52" name="FilFilled">
+      <Position>7</Position>
+      <DefaultConstraintName>DF_OrderDetail_FilFilled</DefaultConstraintName>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>bit|0s</DataType>
+    </column>
+    <index id="84" parent="52" name="PK_OrderDetail">
+      <Position>1</Position>
+      <ColNames>OrderDeatilId</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="85" parent="52" name="PK_OrderDetail">
+      <ObjectId>133575514</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:17:58.160</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:17:58.160</ModifiedTimestamp>
+      <ColNames>OrderDeatilId</ColNames>
+      <UnderlyingIndexName>PK_OrderDetail</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="52" name="FK_OrderDetail_Order">
+      <ObjectId>165575628</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:17:58.860</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:17:58.860</ModifiedTimestamp>
+      <ColNames>OrderId</ColNames>
+      <RefTableId>85575343</RefTableId>
+      <RefTableName>Order</RefTableName>
+      <RefKeyName>PK_Order</RefKeyName>
+      <RefColNames>OrderId</RefColNames>
+    </foreign-key>
+    <foreign-key id="87" parent="52" name="FK_OrderDetail_Product">
+      <ObjectId>181575685</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:17:59.343</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:17:59.343</ModifiedTimestamp>
+      <ColNames>ProductId</ColNames>
+      <RefTableId>5575058</RefTableId>
+      <RefTableName>product</RefTableName>
+      <RefColNames>ProductId</RefColNames>
+    </foreign-key>
+    <default id="88" parent="52" name="DF_OrderDetail_FilFilled">
+      <ObjectId>149575571</ObjectId>
+      <ModifiedTimestamp>2021-05-19.07:17:58.430</ModifiedTimestamp>
+      <ColNames>FilFilled</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+    </default>
+    <column id="89" parent="53" name="PaymentId">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="53" name="PaymentType">
+      <Position>2</Position>
+      <DataType>nvarchar(100 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="53" name="Allowed">
+      <Position>3</Position>
+      <DefaultConstraintName>DF_Payment_Allowed</DefaultConstraintName>
+      <DefaultExpression>1</DefaultExpression>
+      <DataType>bit|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="92" parent="53" name="PK_Payment">
+      <Position>1</Position>
+      <ColNames>PaymentId</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="93" parent="53" name="PK_Payment">
+      <ObjectId>213575799</ObjectId>
+      <CreatedTimestamp>2021-05-19.07:18:50.100</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-19.07:18:50.100</ModifiedTimestamp>
+      <ColNames>PaymentId</ColNames>
+      <UnderlyingIndexName>PK_Payment</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <default id="94" parent="53" name="DF_Payment_Allowed">
+      <ObjectId>229575856</ObjectId>
+      <ModifiedTimestamp>2021-05-19.07:18:50.363</ModifiedTimestamp>
+      <ColNames>Allowed</ColNames>
+      <DefaultExpression>1</DefaultExpression>
+    </default>
+    <column id="95" parent="54" name="ProductName">
+      <Position>1</Position>
+      <DataType>nvarchar(200 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="54" name="ProductDescription">
+      <Position>2</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+    </column>
+    <column id="97" parent="54" name="CategoryID">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="98" parent="54" name="ProductId">
+      <Position>6</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="54" name="Picture">
+      <Position>7</Position>
+      <DataType>image|0s</DataType>
+    </column>
+    <column id="100" parent="54" name="price">
+      <Position>8</Position>
+      <DataType>numeric(18,2)|0s</DataType>
+    </column>
+    <index id="101" parent="54" name="product_ProductId_uindex">
+      <Position>2</Position>
+      <ColNames>ProductId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="102" parent="55" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="55" name="username">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="104" parent="55" name="password">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="105" parent="55" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="106" parent="55" name="gender">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="107" parent="55" name="birthdate">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+    </column>
+  </database-model>
+</dataSource>

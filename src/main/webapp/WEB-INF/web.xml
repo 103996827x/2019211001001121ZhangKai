@@ -64,4 +64,12 @@
         <welcome-file>home</welcome-file>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+    <filter>
+        <filter-name>ZhangkaiFilter</filter-name>
+        <filter-class>com.lab2.ZhangkaiFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ZhangkaiFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
